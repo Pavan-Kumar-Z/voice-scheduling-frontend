@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+@reference "tailwindcss";
+
+/* Custom theme extensions (required for primary colors) */
+@theme {
+  --color-primary-600: #2563eb; /* Blue-600 default; change to your brand color */
+  --color-primary-700: #1d4ed8; /* Darker hover state */
+}
+
+/* Layers for organization */
+@layer base {
+  body {
+    @apply bg-gray-50 text-gray-900 antialiased; /* 'antialiased' added for smoother fonts */
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary-600 hover:bg-primary-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl;
+  }
+  
+  .btn-secondary {
+    @apply bg-white hover:bg-gray-50 text-gray-900 font-semibold py-3 px-6 rounded-lg transition-all duration-200 border-2 border-gray-200;
+  }
+  
+  .card {
+    @apply bg-white rounded-xl shadow-lg p-6 border border-gray-100;
+  }
+}
